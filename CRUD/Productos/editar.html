@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <section class="fondo">
+      <h2 class="encabezadoCRUD">Editar Producto</h2>
+
+      <form
+        class="formulario formCRUD"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <fieldset>
+          <div class="caja">
+            <label for="titulo">titulo</label>
+            <input
+              type="text"
+              name="titulo"
+              id="titulo"
+              placeholder="titulo producto"
+            />
+          </div>
+
+          <div class="caja">
+            <label for="precio">precio</label>
+            <input
+              type="number"
+              name="precio"
+              id="precio"
+              placeholder="precio producto"
+            />
+          </div>
+
+          <div class="caja">
+            <label for="imagen">imagen</label>
+            <div class="admin-imagenes">
+              <input
+                type="file"
+                name="imagen"
+                id="imagen"
+                accept="image/jpeg, image/png"
+              />
+              <img
+                src="../../imagenes/<?php echo $item['imagen'] ?>"
+                alt="imagen"
+              />
+            </div>
+          </div>
+
+          <div class="caja">
+            <label for="descripcion">descripción</label>
+            <textarea name="descripcion" id="descripcion"></textarea>
+          </div>
+
+          <div class="caja">
+            <label for="cantidad">cantidad</label>
+            <input
+              type="number"
+              name="cantidad"
+              id="cantidad"
+              placeholder="cantidad disponible"
+              min="1"
+            />
+          </div>
+        </fieldset>
+        <input type="submit" value="actualizar producto" class="btn" />
+      </form>
+
+      <div class="lista-botones">
+        <a class="btn" href="../../AdminPanel.html">regresar</a>
+      </div>
+    </section>
+  </body>
+</html>
